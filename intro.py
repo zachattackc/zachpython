@@ -11,8 +11,10 @@ while running:
  for event in pygame.event.get():
     if event.type == pygame.QUIT:
         running = False
+        console.log("Game over")
 pygame.quit()
-sys.exit()
+sys.exit() #quits the app when we are done
+
 
 
 
