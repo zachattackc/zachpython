@@ -1,7 +1,12 @@
 import pygame
 import sys
 pygame.init()
-screen = pygame.display.set_mode((600, 600))
+
+WIDTH = 800
+HEIGHT = 600
+CELL_SIZE = 20
+
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Snake Game - Step 1")
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -22,6 +27,9 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         screen.fill(BLACK)
+        rect_x = WIDTH // 2 - CELL_SIZE // 2
+        rect_y = HEIGHT // 2 - CELL_SIZE // 2
+        pygame.draw.rect(screen, GREEN, (rect_x, rect_y, CELL_SIZE, CELL_SIZE))
         pygame.display.flip()
     clock.tick(60)
 pygame.quit()
