@@ -25,17 +25,20 @@ PINK = (255, 192, 203)
 rect_x = WIDTH // 2 - CELL_SIZE // 2 #middle of the screen
 rect_y = HEIGHT // 2 - CELL_SIZE // 2 #middle of the screen
 
+
+
+
 clock = pygame.time.Clock()
 running = True 
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-            rect_x += direction_x * CELL_SIZE
-            rect_y += direction_y * CELL_SIZE
-        screen.fill(BLACK)
-        pygame.draw.rect(screen, GREEN, (rect_x, rect_y, CELL_SIZE, CELL_SIZE))
-        pygame.display.flip() #update the screen
+    rect_x += direction_x * CELL_SIZE
+    rect_y += direction_y * CELL_SIZE
+    screen.fill(BLACK)
+    pygame.draw.rect(screen, GREEN, (rect_x, rect_y, CELL_SIZE, CELL_SIZE))
+    pygame.display.flip() #update the screen
     clock.tick(60) #60 fps
 pygame.quit()
 
