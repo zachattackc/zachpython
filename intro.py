@@ -74,6 +74,6 @@ while running:
     # Draw the main square (on top of the trail)
     pygame.draw.rect(screen, blockColor, (rect_x, rect_y, CELL_SIZE, CELL_SIZE))
     pygame.display.flip() #update the screen
-    clock.tick(60) #60 fps
+    clock.tick(120) #60 fps
 pygame.quit()
 
